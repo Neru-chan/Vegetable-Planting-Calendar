@@ -1,0 +1,124 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    background-image: url(assets/background/wheat.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    
+}
+
+.l-page {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 50%;
+    height: 100%;
+
+    
+    padding: 30px 30px 10px 30px;
+
+    background: rgba(255, 255, 255);
+    box-shadow:0 0 20px #000;
+}
+
+.sub {
+
+    height: 100%;
+    width: 10%;
+
+    right: 0;
+    position: absolute;
+
+    background-color: #f00;
+}
+
+table {
+    width: 100%;
+    border: 3px solid #000;
+}
+
+tr.cal-head {
+    
+}
+
+tr.column-days {
+
+}
+
+td {
+
+    width: calc(100%/7);
+
+    height: 80px;
+
+    
+
+    
+    text-align: center;
+    vertical-align: middle;
+
+    color: #000;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+td.prev-month,
+td.next-month{
+    color: #888;
+}
+td.prev-month:hover,
+td.next-month:hover{
+    color: #fff;
+}
+
+td.prev-month,
+td.curr-month,
+td.next-month {
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+
+td.prev-month:hover,
+td.curr-month:hover,
+td.next-month:hover {
+    background-color: #ccc;
+}
+
+td.today {
+    border: 3px solid #f00;
+}
+
+#btnPrev {
+    float: left;
+}
+
+#btnNext {
+    float: right;
+}
+
+#btnPrev,
+#btnNext {
+    background: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+#btnPrev:hover,
+#btnNext:hover {
+  color: #00f;
+}
