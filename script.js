@@ -1,14 +1,13 @@
 import { Calendar } from "./Calendar";
 
 window.onload = function() {
-  let c = new Calendar("divCal");			
+  let c = new Calendar(".main");			
   c.showcurr();
-  
-  document.getElementById('btnPrev').onclick = function() {
-    c.prevMonth();
-  }
 
-  document.getElementById('btnNext').onclick = function() {
-    c.nextMonth();
-  }
+  // document.querySelector('.btn-prev').onclick = function() {
+  //   c.prevMonth();
+  // }
+
+  // document.querySelector('.btn-next').onclick = function() {
+  //   c.nextMonth();
 }
