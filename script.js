@@ -1,13 +1,17 @@
 import { Calendar } from "./Calendar";
+import { Vegetable } from "./Vegetable";
+import { Vegetables } from "./Vegetables";
 
 window.onload = function() {
-  let c = new Calendar(".main");			
+  
+  //console.log(Vegetables.Tomato);
+
+  // Object.keys(Vegetables).forEach(veg => {
+  //   console.log(veg); 
+  // })
+
+  console.log(Object.values(Vegetables));
+
+  let c = new Calendar(".app");			
   c.showcurr();
-
-  // document.querySelector('.btn-prev').onclick = function() {
-  //   c.prevMonth();
-  // }
-
-  // document.querySelector('.btn-next').onclick = function() {
-  //   c.nextMonth();
 }
