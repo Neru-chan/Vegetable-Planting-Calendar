@@ -1,0 +1,104 @@
+.app {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: grid;
+  grid-template-columns: 75% 10px auto;
+
+  background-color: #fff;
+
+  padding: 15px;
+  border-radius: 15px;
+}
+
+#calendar {
+  font-family: sans-serif;
+
+  width: 100%;
+  height: 100%;
+  
+  display: grid;
+  grid-template-rows: 1fr 1fr 5fr;
+}
+
+#head, #days-of-week, #days {
+  padding: 5px;
+}
+
+#head {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+#btn-prev, #btn-next {
+  background-color: #fff;
+
+  font-size: 2em;
+
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+#btn-prev:hover, #btn-next:hover {
+  font-size: 2.1em;
+  color: #88f;
+}
+
+#btn-prev:before {
+  content: "\2039";
+}
+
+#btn-next:after {
+  content: "\203A";
+}
+
+#month {
+  font-size: 2em;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-of-week {
+  font-size: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.prev-month, .curr-month, .next-month {
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-month, .next-month {
+  color: #ccc;
+}
+
+.prev-month:hover, .curr-month:hover, .next-month:hover {
+  background-color: #ccc;
+  color: #fff;
+}
