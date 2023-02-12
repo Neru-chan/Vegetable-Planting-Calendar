@@ -22,7 +22,7 @@ export class Vegetable {
 
     this.name = options?.name ?? "???";
     this.sowIndoors = options?.sowIndoors;
-    this.sowOutdoors = options?.sowOutoors;
+    this.sowOutdoors = options?.sowOutdoors;
     this.plantOut = options?.plantOut;
     this.harvest = options?.harvest;
   } 

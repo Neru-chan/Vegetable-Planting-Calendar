@@ -1,0 +1,123 @@
+.vegetable {
+  font-size: 3em;
+  font-family: "Vegetables";
+}
+
+.vegetable::after {
+  /* background-color: aqua; */
+  text-shadow: 1px 1px 0px black;
+  margin: 5px;
+  
+}
+
+.tomato::after {    
+  content: ")";
+  color: rgb(215, 19, 19);
+}
+
+.beetroot::after {
+  content: "M";
+  color: rgb(111, 9, 45);
+}
+
+.aubergine-indoors::after {
+  content: "W";
+  color: rgb(99, 8, 99);
+}
+
+.aubergine-outdoors::after {
+  content: "W";
+  color: rgb(99, 8, 99);
+}
+
+.broccoli::after {
+  content: "Z";
+  color: rgb(102, 232, 100);
+}
+
+.cabbage::after {
+  
+}
+
+.carrots::after {
+  content: "/";
+  color: rgb(224, 115, 51)
+}
+
+.chillies::after {
+  content: "C";
+  color: rgb(209, 11, 11);
+}
+
+.Courgette::after {
+
+}
+
+.cucumber::after {
+  content: "\"";
+  color: rgb(16, 173, 16);
+}
+
+.Garlic::after {
+  content: "m";
+  color: rgb(255, 247, 218);
+}
+
+.Leeks::after {
+
+}
+
+.Marrow::after {
+
+}
+
+.Onions-seed {
+
+}
+
+.Onions-set {
+
+}
+
+.Onions-spring {
+
+}
+
+.Parsnip {
+
+}
+
+.Peas::after {
+  content: "R";
+  color: rgb(62, 194, 48);
+}
+
+.Pepper::after {
+  content: "O";
+  color: rgb(255, 247, 0);
+}
+
+.potatoes::after {
+  content: "v";
+  color:rgb(106, 58, 10);
+}
+
+.Pumpkin::after {
+
+}
+
+.Radish::after {
+  content: "M";
+  color:rgb(235, 44, 120);
+}
+
+.Rhubarb::after {
+
+}
+
+@font-face {
+  font-family: "Vegetables";
+  src: url("../assets/fonts/Vegetables.ttf");
+  font-style: normal; 
+  font-weight: normal; 
+}

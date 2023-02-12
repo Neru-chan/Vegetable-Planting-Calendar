@@ -1,5 +1,6 @@
 import { Calendar } from "./Calendar";
 import { PairDate } from "./PairDate";
+import { Vegetable } from "./Vegetable";
 import { Vegetables } from "./Vegetables";
 
 export class CalendarDisplay {
@@ -19,6 +20,7 @@ export class CalendarDisplay {
       this.daysOfWeek = document.createElement("div");
       this.days = document.createElement("div");
     this.info = document.createElement("div");
+      this.legend = document.createElement("div");
   }
 
   draw() {
@@ -223,7 +225,7 @@ export class CalendarDisplay {
       }
 
       if (vegetable.plantOut !== undefined &&
-      PairDate.isInBetween(new Date(0, date.getMonth(), date.getDate()), vegetable.plantOut.begin, vegetable.harvest.end)) {
+      PairDate.isInBetween(new Date(0, date.getMonth(), date.getDate()), vegetable.plantOut.begin, vegetable.plantOut.end)) {
         d.classList.add("plant-out");
         push = true;
         text.push("PLANTOUT");
@@ -234,35 +236,50 @@ export class CalendarDisplay {
         d.classList.add("sow-indoors");
         push = true;
         text.push("SOW INDOORS");
+        console.log("sow indoors: " + vegetable.name)
       }
 
       if (vegetable.sowOutdoors !== undefined &&
-      PairDate.isInBetween(new Date(0, date.getMonth(), date.getDate()), vegetable.sowOutoors.begin, vegetable.sowOutoors.end)) {
+      PairDate.isInBetween(new Date(0, date.getMonth(), date.getDate()), vegetable.sowOutdoors.begin, vegetable.sowOutdoors.end)) {
         d.classList.add("sow-outdoors");
         push = true;
-        text.push("SOW INDOORS");
+        text.push("SOW OUTDOORS");
+        console.log("sow outdoors: " + vegetable.name)
       }
 
-      //console.log(`today: month: ${date.getMonth()}, day: ${date.getDate()}`)
-      d.innerText = `${vegetable.name} ${text}`;
+      d.classList.add(vegetable.name.replace(/ /g, '-'));
+
       if (push) arr.push(d);
+      //d.innerText = `/${vegetable.name} ${text}`;
+      d.innerText = ``;
     })
 
     this.info.replaceChildren(...arr);
+  }
 
+  #appendLegend() {
+    this.legend.id = "legend";
+    this.info.append(this.legend);
 
+    let sowIn = document.createElement("div")
+    sowIn.classList.add("legend");
+    sowIn.classList.add("sow-indoors");
 
+    let sowOut = document.createElement("div");
+    sowOut.classList.add("legend");
+    sowOut.classList.add("sow-outdoors");
 
+    let plantOut = document.createElement("div");
+    plantOut.classList.add("legend");
+    plantOut.classList.add("plant-out");
 
-    // console.log(PairDate.isInBetween(
-    //   new Date(2021, 1, 6), /* date */
-    //   new Date(2021, 1, 5), /* first */
-    //   new Date(2021, 1, 7) /* second */
-    //   )
-    // );
+    let harvest = document.createElement("div");
+    harvest.classList.add("legend");
+    harvest.classList.add("harvest");
 
-    //this.info.innerText = Vegetables[0].harvest.begin;
+    this.legend.append(
+      sowIn, sowOut, plantOut, harvest
+    );
 
-    // this.info.innerText = date;
   }
 }

@@ -4,7 +4,7 @@ body, html {
 }
 
 body {
-  background-image: url("assets/background/wheat.jpg");
+  background-image: url("../assets/background/wheat.jpg");
   background-size: 100%;
 }
 
@@ -17,8 +17,3 @@ body {
   grid-template-rows: auto 90% auto;
 }
 
-.app #info {
-  grid-column-start: 3;
-  
-  background-color: #88f;
-}
