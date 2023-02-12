@@ -215,36 +215,30 @@ export class CalendarDisplay {
       d.classList.add("vegetable");
 
       let push = false;
-      let text = [];
+      // let text = [];
 
       if (vegetable.harvest !== undefined &&
       PairDate.isInBetween(new Date(0, date.getMonth(), date.getDate()), vegetable.harvest.begin, vegetable.harvest.end)) {
         d.classList.add("harvest");
         push = true;
-        text.push("HARVEST");
       }
 
       if (vegetable.plantOut !== undefined &&
       PairDate.isInBetween(new Date(0, date.getMonth(), date.getDate()), vegetable.plantOut.begin, vegetable.plantOut.end)) {
         d.classList.add("plant-out");
         push = true;
-        text.push("PLANTOUT");
       }
 
       if (vegetable.sowIndoors !== undefined &&
       PairDate.isInBetween(new Date(0, date.getMonth(), date.getDate()), vegetable.sowIndoors.begin, vegetable.sowIndoors.end)) {
         d.classList.add("sow-indoors");
         push = true;
-        text.push("SOW INDOORS");
-        console.log("sow indoors: " + vegetable.name)
       }
 
       if (vegetable.sowOutdoors !== undefined &&
       PairDate.isInBetween(new Date(0, date.getMonth(), date.getDate()), vegetable.sowOutdoors.begin, vegetable.sowOutdoors.end)) {
         d.classList.add("sow-outdoors");
         push = true;
-        text.push("SOW OUTDOORS");
-        console.log("sow outdoors: " + vegetable.name)
       }
 
       d.classList.add(vegetable.name.replace(/ /g, '-'));
@@ -257,29 +251,29 @@ export class CalendarDisplay {
     this.info.replaceChildren(...arr);
   }
 
-  #appendLegend() {
-    this.legend.id = "legend";
-    this.info.append(this.legend);
+  // #appendLegend() {
+  //   this.legend.id = "legend";
+  //   this.info.append(this.legend);
 
-    let sowIn = document.createElement("div")
-    sowIn.classList.add("legend");
-    sowIn.classList.add("sow-indoors");
+  //   let sowIn = document.createElement("div")
+  //   sowIn.classList.add("legend");
+  //   sowIn.classList.add("sow-indoors");
 
-    let sowOut = document.createElement("div");
-    sowOut.classList.add("legend");
-    sowOut.classList.add("sow-outdoors");
+  //   let sowOut = document.createElement("div");
+  //   sowOut.classList.add("legend");
+  //   sowOut.classList.add("sow-outdoors");
 
-    let plantOut = document.createElement("div");
-    plantOut.classList.add("legend");
-    plantOut.classList.add("plant-out");
+  //   let plantOut = document.createElement("div");
+  //   plantOut.classList.add("legend");
+  //   plantOut.classList.add("plant-out");
 
-    let harvest = document.createElement("div");
-    harvest.classList.add("legend");
-    harvest.classList.add("harvest");
+  //   let harvest = document.createElement("div");
+  //   harvest.classList.add("legend");
+  //   harvest.classList.add("harvest");
 
-    this.legend.append(
-      sowIn, sowOut, plantOut, harvest
-    );
+  //   this.legend.append(
+  //     sowIn, sowOut, plantOut, harvest
+  //   );
 
-  }
+  // }
 }
