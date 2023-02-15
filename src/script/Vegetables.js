@@ -1,6 +1,9 @@
 import { PairDate } from "./PairDate";
 import { Vegetable } from "./Vegetable";
 
+/**
+ * Array of Vegetable class objects
+ */
 export const Vegetables = [
   new Vegetable({
     name: "Tomato",

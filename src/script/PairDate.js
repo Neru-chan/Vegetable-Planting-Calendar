@@ -46,6 +46,13 @@ export class PairDate {
     return new Date(0, month, day);
   }
 
+  /**
+   * Is a Date Between two others Dates
+   * @param {*} date 
+   * @param {*} first
+   * @param {*} second 
+   * @returns boolean
+   */
   static isInBetween(date, first, second) {
     if (!(date instanceof Date && first instanceof Date && second instanceof Date)) {
       throw new Error (`incorrect parameters`);

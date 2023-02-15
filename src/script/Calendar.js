@@ -3,10 +3,9 @@ export class Calendar {
     this.divId = divId;
   }
   
-  test() {
-    console.log(this.divId);
-  }
-    
+  /**
+   * Static array of String
+   */
   static DaysOfWeek = [
     'Mon',
     'Tue',
@@ -17,6 +16,9 @@ export class Calendar {
     'Sun'
   ];
 
+  /**
+   * Static array of String
+   */
   static Months = [
     'January', 'February', 'March',
     'April', 'May', 'June',
@@ -44,17 +46,4 @@ export class Calendar {
     }
     else this.currMonth += 1;
   }
-
-  // showInfo(month, week) {
-  //   let main = document.querySelector(this.divId);
-  //   let info = main.querySelector("#info");
-  //   if(info === null) {
-  //     info = document.createElement("div");
-  //     info.id = "info";
-  //     main.append(info);
-  //   }
-
-  //   info.innerText = `${month}, ${week}`;
-  //}
-
 }

@@ -1,6 +1,5 @@
 import { Calendar } from "./Calendar";
 import { PairDate } from "./PairDate";
-import { Vegetable } from "./Vegetable";
 import { Vegetables } from "./Vegetables";
 
 export class CalendarDisplay {
@@ -250,30 +249,4 @@ export class CalendarDisplay {
 
     this.info.replaceChildren(...arr);
   }
-
-  // #appendLegend() {
-  //   this.legend.id = "legend";
-  //   this.info.append(this.legend);
-
-  //   let sowIn = document.createElement("div")
-  //   sowIn.classList.add("legend");
-  //   sowIn.classList.add("sow-indoors");
-
-  //   let sowOut = document.createElement("div");
-  //   sowOut.classList.add("legend");
-  //   sowOut.classList.add("sow-outdoors");
-
-  //   let plantOut = document.createElement("div");
-  //   plantOut.classList.add("legend");
-  //   plantOut.classList.add("plant-out");
-
-  //   let harvest = document.createElement("div");
-  //   harvest.classList.add("legend");
-  //   harvest.classList.add("harvest");
-
-  //   this.legend.append(
-  //     sowIn, sowOut, plantOut, harvest
-  //   );
-
-  // }
 }
