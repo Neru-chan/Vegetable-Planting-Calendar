@@ -1,5 +1,5 @@
-import { Calendar } from "./Calendar";
-import { CalendarDisplay } from "./CalendarDisplay";
+import { Calendar } from "./Calendar.js";
+import { CalendarDisplay } from "./CalendarDisplay.js";
 
 window.onload = function() {
   let c = new Calendar(".app");	

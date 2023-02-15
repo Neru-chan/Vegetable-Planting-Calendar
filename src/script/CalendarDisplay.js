@@ -1,6 +1,6 @@
-import { Calendar } from "./Calendar";
-import { PairDate } from "./PairDate";
-import { Vegetables } from "./Vegetables";
+import { Calendar } from "./Calendar.js";
+import { PairDate } from "./PairDate.js";
+import { Vegetables } from "./Vegetables.js";
 
 export class CalendarDisplay {
 

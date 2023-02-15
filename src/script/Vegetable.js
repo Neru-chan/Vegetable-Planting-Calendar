@@ -1,5 +1,3 @@
-import { PairDate } from "./PairDate";
-
 /**
  * Vegetable class
  */
