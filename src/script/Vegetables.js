@@ -1,5 +1,5 @@
-import { PairDate } from "./PairDate.js";
-import { Vegetable } from "./Vegetable.js";
+import { PairDate } from "./PairDate";
+import { Vegetable } from "./Vegetable";
 
 /**
  * Array of Vegetable class objects
